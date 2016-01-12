@@ -3,7 +3,7 @@ require 'test_helper'
 class TalkTest < ActiveSupport::TestCase
   def setup
     @event = events(:vodqa)
-    @talk = Talk.new(title: "Agile Testing", presenters: "C3PO", event_id: @event.id);
+    @talk = @event.talks.build(title: "Agile Testing", presenters: "C3PO")
   end
 
   test "Talk should be valid if it associated with a proper Event" do
