@@ -1,20 +1,24 @@
-<div class="md-col-3">
+<h1>List of events</h1>
 
-  <table class="table table-striped ">
-    <thead>
-    <tr>
-      <td>Event</td>
-      <td>Date</td>
-    </tr>
-    </thead>
-    <tbody>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
 
-    <% @events.each do |event| %>
-        <tr>
-          <td><%= event.name %></td>
-          <td><%= event.date %></td>
-        </tr>
-    <% end %>
-    </tbody>
-  </table>
+    <table class="table table-striped ">
+      <thead>
+      <tr>
+        <td>Event</td>
+        <td>Date</td>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @events.each do |event| %>
+          <tr>
+            <td><%= event.name %></td>
+            <td><%= event.date %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
