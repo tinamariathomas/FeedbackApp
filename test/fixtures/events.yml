@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: 
+vodqa:
+  name: VodQA
   date: 2016-01-11
 
-two:
-  name: 
+devdash:
+  name: DevDash
   date: 2016-01-11
