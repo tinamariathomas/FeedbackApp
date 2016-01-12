@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     date = Date.new event["date(1i)"].to_i, event["date(2i)"].to_i, event["date(3i)"].to_i
     @event = Event.new(name:event[:name],date:date)
     @event.save
-    render 'new'
+    redirect_to root_url
   end
 
   def index

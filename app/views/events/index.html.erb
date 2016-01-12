@@ -1,17 +1,20 @@
-<table class="table table-striped ">
-  <thead>
-  <tr>
-    <td>Event</td>
-    <td>Date</td>
-  </tr>
-  </thead>
-  <tbody>
+<div class="md-col-3">
 
-  <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.date %></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <td>Event</td>
+      <td>Date</td>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @events.each do |event| %>
+        <tr>
+          <td><%= event.name %></td>
+          <td><%= event.date %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
