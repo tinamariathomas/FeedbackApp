@@ -1,8 +1,17 @@
-<table>
-<% @events.each do |event| %>
-    <tr>
-      <td><%= event.name %></td>
-      <td><%= event.date %></td>
-    </tr>
-<% end %>
+<table class="table table-striped ">
+  <thead>
+  <tr>
+    <td>Event</td>
+    <td>Date</td>
+  </tr>
+  </thead>
+  <tbody>
+
+  <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.date %></td>
+      </tr>
+  <% end %>
+  </tbody>
 </table>
