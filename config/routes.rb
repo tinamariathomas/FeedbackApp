@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'events#index'
 
-  #   get 'products/:id' => 'catalog#view'
   resources :events do
-    resources :talks
+    resources :talks do
+      resources :feedbacks
+    end
   end
 end

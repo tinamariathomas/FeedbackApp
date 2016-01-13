@@ -3,7 +3,13 @@ require 'test_helper'
 class FeedbackTest < ActiveSupport::TestCase
 
   def setup
-    @feedback_without_name_field = Feedback.new(comments: "It was a great talk", rating: 2)
+    @event = Event.new(name:'Vodqa2016')
+    @talk = @event.talks.build(title: "Agile Testing", presenters: "C3PO")
+    @feedback_without_name_field = @talk.feedbacks.build(comments: "It was a great talk", rating: 2)
+  end
+
+  test "Feedback should be valid if it associated with a talk" do
+    assert @feedback_without_name_field.valid?
   end
 
   test "If name is empty, default name should be anonymous" do

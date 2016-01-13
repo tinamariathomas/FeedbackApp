@@ -15,6 +15,8 @@
           <tr>
             <td><%= talk.title %></td>
             <td><%= talk.presenters %></td>
+            <td><%= link_to "Give Feedback",new_event_talk_feedback_path(@event,talk) %></td>
+            <td><%= link_to "View Submitted Feedback",event_talk_feedbacks_path(@event,talk) %></td>
           </tr>
       <% end %>
       </tbody>
