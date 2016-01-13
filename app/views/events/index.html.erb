@@ -16,6 +16,7 @@
           <tr>
             <td><%= event.name %></td>
             <td><%= event.date %></td>
+            <td><%= link_to "Talks", [event, :talks] %></td>
           </tr>
       <% end %>
       </tbody>
