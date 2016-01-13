@@ -1,17 +1,16 @@
 <h1>Add Talks for an event</h1>
 
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@talk) do |f| %>
-
+    <%= form_for @talk, :url =>event_talks_path do |f| %>
+        <%= render 'shared/error_messages' %>
         <div class="form-group">
-          <%= f.label :title %>
+          <%= f.label "Talk title" %>
           <%= f.text_field :title, class: "form-control" %>
         </div>
         <div class="form-group">
           <%= f.label :presenters %>
-          <%= f.date_select :presenters, class: "form-control" %>
+          <%= f.text_field :presenters, class: "form-control" %>
         </div>
         <div class="form-group">
           <%= f.submit "Create new event", class: "btn btn-default" %>

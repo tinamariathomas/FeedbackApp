@@ -1,0 +1,23 @@
+<h1>List of events</h1>
+<%= link_to "Create New event", new_event_talk_path %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table class="table table-striped ">
+      <thead>
+      <tr>
+        <td>Title</td>
+        <td>Presenters</td>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @talks.each do |talk| %>
+          <tr>
+            <td><%= talk.title %></td>
+            <td><%= talk.presenters %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
