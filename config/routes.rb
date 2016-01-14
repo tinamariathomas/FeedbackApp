@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'admin/login' => 'admin#login'
+  get 'admin/login' => 'admins#login'
+  post 'admin/login' => 'admins#check_login'
 end
