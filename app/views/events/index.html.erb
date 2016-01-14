@@ -1,5 +1,8 @@
 <h1>List of events</h1>
-<%= link_to "Create New event", new_event_path %>
+<% admin = Admin.find_by username: session[:username] %>
+<% if admin.present?  %>
+    <%= link_to "Create New event", new_event_path %>
+<% end %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 

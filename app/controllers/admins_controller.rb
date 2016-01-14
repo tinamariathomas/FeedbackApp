@@ -10,7 +10,7 @@ class AdminsController < ApplicationController
       redirect_to admin_login_path
     else
       if (admin[:password]==params[:session][:password])
-
+        log_in admin
         redirect_to root_path
       else
         flash[:error] = "Invalid credentials"
