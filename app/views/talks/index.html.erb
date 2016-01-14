@@ -1,5 +1,8 @@
 <h1>List of events</h1>
-<%= link_to "Add talk to event", new_event_talk_path %>
+<% admin = Admin.find_by username: session[:username] %>
+<% if admin.present? %>
+    <%= link_to "Add talk to event", new_event_talk_path %>
+<% end %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <table class="table table-striped ">
@@ -15,8 +18,11 @@
           <tr>
             <td><%= talk.title %></td>
             <td><%= talk.presenters %></td>
-            <td><%= link_to "Give Feedback",new_event_talk_feedback_path(@event,talk) %></td>
-            <td><%= link_to "View Submitted Feedback",event_talk_feedbacks_path(@event,talk) %></td>
+            <td><%= link_to "Give Feedback", new_event_talk_feedback_path(@event, talk) %></td>
+            <% admin = Admin.find_by username: session[:username] %>
+            <% if admin.present? %>
+                <td><%= link_to "View Submitted Feedback", event_talk_feedbacks_path(@event, talk) %></td>
+            <% end %>
           </tr>
       <% end %>
       </tbody>
